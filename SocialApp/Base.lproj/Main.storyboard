@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nei-ff-9vy">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nei-ff-9vy" customClass="TopMargrin" customModule="SocialApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devslopes-logo" translatesAutoresizingMaskIntoConstraints="NO" id="agO-54-t1L">
@@ -56,12 +56,11 @@
                                     <constraint firstItem="b5Z-eV-eg8" firstAttribute="leading" secondItem="o4C-7e-9et" secondAttribute="leading" constant="8" id="k96-cr-dxR"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7e-bT-iOR">
-                                <rect key="frame" x="88" y="212" width="199" height="198.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7e-bT-iOR" customClass="RoundBtn" customModule="SocialApp" customModuleProvider="target">
+                                <rect key="frame" x="107.5" y="212" width="160" height="160"/>
                                 <color key="backgroundColor" red="0.3525395393371582" green="0.44528967142105103" blue="0.69834822416305542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="rBb-dW-M6F"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="sAU-Zf-zbk"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="160" id="sAU-Zf-zbk"/>
                                     <constraint firstAttribute="width" secondItem="D7e-bT-iOR" secondAttribute="height" multiplier="1:1" id="uQG-gG-sCW"/>
                                 </constraints>
                                 <state key="normal" image="f"/>
@@ -81,7 +80,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hD-eE-rvq">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hD-eE-rvq" customClass="RoundCornersBtn" customModule="SocialApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="104" width="343" height="37"/>
                                         <color key="backgroundColor" red="0.84781259298324585" green="0.32320201396942139" blue="0.1426982581615448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
