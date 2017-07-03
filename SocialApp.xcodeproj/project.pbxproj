@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		1DD7D4DEBFF340482A864B26 /* Pods_SocialAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7776F04DCB0E073469A964A5 /* Pods_SocialAppTests.framework */; };
 		4411C7501F05D2C600F70F98 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4411C74F1F05D2C600F70F98 /* CircleImageView.swift */; };
+		4412A9021F0A94C0003A4C03 /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4412A9011F0A94C0003A4C03 /* FirebaseDataService.swift */; };
 		442274AE1F031C610072E50F /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442274AD1F031C610072E50F /* FeedVC.swift */; };
 		442274B01F0333E30072E50F /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442274AF1F0333E30072E50F /* FancyView.swift */; };
+		44AE72E51F09DA9200258E82 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AE72E41F09DA9200258E82 /* PostCell.swift */; };
 		69AC02401EF7412E00E143A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC023F1EF7412E00E143A3 /* AppDelegate.swift */; };
 		69AC02421EF7412F00E143A3 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC02411EF7412F00E143A3 /* SignInVC.swift */; };
 		69AC02451EF7412F00E143A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AC02431EF7412F00E143A3 /* Main.storyboard */; };
@@ -39,8 +41,10 @@
 		1E8F8A90F634658DFAA08B96 /* Pods-SocialAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialAppTests/Pods-SocialAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		4403B60F1F01D12E003B38F4 /* SocialApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialApp.entitlements; sourceTree = "<group>"; };
 		4411C74F1F05D2C600F70F98 /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		4412A9011F0A94C0003A4C03 /* FirebaseDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDataService.swift; sourceTree = "<group>"; };
 		442274AD1F031C610072E50F /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		442274AF1F0333E30072E50F /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		44AE72E41F09DA9200258E82 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		69AC023C1EF7412E00E143A3 /* SocialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69AC023F1EF7412E00E143A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69AC02411EF7412F00E143A3 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -94,6 +98,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4412A9001F0A949A003A4C03 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4412A9011F0A94C0003A4C03 /* FirebaseDataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		69AC02331EF7412D00E143A3 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +129,7 @@
 		69AC023E1EF7412E00E143A3 /* SocialApp */ = {
 			isa = PBXGroup;
 			children = (
+				4412A9001F0A949A003A4C03 /* Services */,
 				4403B60F1F01D12E003B38F4 /* SocialApp.entitlements */,
 				69E386A21EF783940045C133 /* Utilities */,
 				69AC02631EF7447A00E143A3 /* Controller */,
@@ -124,6 +137,7 @@
 				69AC02611EF7447000E143A3 /* Model */,
 				69AC023F1EF7412E00E143A3 /* AppDelegate.swift */,
 				69AC02431EF7412F00E143A3 /* Main.storyboard */,
+				44AE72E41F09DA9200258E82 /* PostCell.swift */,
 				69AC02461EF7413000E143A3 /* Assets.xcassets */,
 				69AC02481EF7413000E143A3 /* LaunchScreen.storyboard */,
 				69AC024B1EF7413000E143A3 /* Info.plist */,
@@ -404,7 +418,9 @@
 				69AC02401EF7412E00E143A3 /* AppDelegate.swift in Sources */,
 				442274B01F0333E30072E50F /* FancyView.swift in Sources */,
 				69E386A11EF783270045C133 /* TopMargrin.swift in Sources */,
+				4412A9021F0A94C0003A4C03 /* FirebaseDataService.swift in Sources */,
 				69E386A41EF783A40045C133 /* Constants.swift in Sources */,
+				44AE72E51F09DA9200258E82 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,10 +563,12 @@
 				CODE_SIGN_ENTITLEMENTS = SocialApp/SocialApp.entitlements;
 				DEVELOPMENT_TEAM = Q9W4EG9Y84;
 				INFOPLIST_FILE = SocialApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MyRoomCreations.SocialApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -562,10 +580,12 @@
 				CODE_SIGN_ENTITLEMENTS = SocialApp/SocialApp.entitlements;
 				DEVELOPMENT_TEAM = Q9W4EG9Y84;
 				INFOPLIST_FILE = SocialApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MyRoomCreations.SocialApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

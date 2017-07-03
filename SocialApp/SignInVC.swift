@@ -43,7 +43,7 @@ class SignInVC: UIViewController {
                 print("$*$*$* Logged in!")
                 let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuth(withCredential: credential)
-                self.performSegue(withIdentifier: "goToFeed", sender: self)
+                self.performSegue(withIdentifier: "goToFeedVC", sender: self)
                 
             }
         }
@@ -55,6 +55,9 @@ class SignInVC: UIViewController {
                 print("$*$*$* unable to authenticate with firebase: \(error.debugDescription)")
             } else {
                 print("$*$*$* successfully authenticated with Firebase")
+                if let user = user {
+                    FirebaseDataService.ds.createFirebaseUser(uid: user.uid, userData: ["provider": cred.provider])
+                }
             }
         }
     }
@@ -63,12 +66,20 @@ class SignInVC: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil {
                     print("$*$*$* Email user authenticated with firebase")
+                    if let user = user {
+                        FirebaseDataService.ds.createFirebaseUser(uid: user.uid, userData: ["provider": user.providerID])
+                    }
+                    self.performSegue(withIdentifier: "goToFeedVC", sender: self)
                 } else {
                     Auth.auth().createUser(withEmail: email, password: password, completion: { (user, err) in
                         if err != nil {
                             print("$*$*$* error authenticating with firebase using email: \(err.debugDescription)")
                         } else {
                             print("$*$*$* successfully created new user on firebase!")
+                            if let user = user {
+                                FirebaseDataService.ds.createFirebaseUser(uid: user.uid, userData: ["provider": user.providerID])
+                            }
+                            self.performSegue(withIdentifier: "goToFeedVC", sender: self)
                         }
                     })
                 }
