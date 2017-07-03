@@ -43,6 +43,7 @@ class SignInVC: UIViewController {
                 print("$*$*$* Logged in!")
                 let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuth(withCredential: credential)
+                self.performSegue(withIdentifier: "goToFeed", sender: self)
                 
             }
         }

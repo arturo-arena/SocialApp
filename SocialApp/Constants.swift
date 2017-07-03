@@ -8,4 +8,4 @@
 
 import UIKit
 
-let SHADOW_GRAY: CGColor = UIColor(red: 120.0 / 255.0, green: 120.0 / 255.0, blue: 120.0 / 255.0, alpha: 0.6).cgColor
+let SHADOW_GRAY: CGColor = UIColor(red: 120.0 / 255.0, green: 120.0 / 255.0, blue: 120.0 / 255.0, alpha: 0.8).cgColor

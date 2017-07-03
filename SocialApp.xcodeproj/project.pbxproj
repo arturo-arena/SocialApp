@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1DD7D4DEBFF340482A864B26 /* Pods_SocialAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7776F04DCB0E073469A964A5 /* Pods_SocialAppTests.framework */; };
+		4411C7501F05D2C600F70F98 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4411C74F1F05D2C600F70F98 /* CircleImageView.swift */; };
 		442274AE1F031C610072E50F /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442274AD1F031C610072E50F /* FeedVC.swift */; };
+		442274B01F0333E30072E50F /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442274AF1F0333E30072E50F /* FancyView.swift */; };
 		69AC02401EF7412E00E143A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC023F1EF7412E00E143A3 /* AppDelegate.swift */; };
 		69AC02421EF7412F00E143A3 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AC02411EF7412F00E143A3 /* SignInVC.swift */; };
 		69AC02451EF7412F00E143A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AC02431EF7412F00E143A3 /* Main.storyboard */; };
@@ -36,7 +38,9 @@
 /* Begin PBXFileReference section */
 		1E8F8A90F634658DFAA08B96 /* Pods-SocialAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialAppTests/Pods-SocialAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		4403B60F1F01D12E003B38F4 /* SocialApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialApp.entitlements; sourceTree = "<group>"; };
+		4411C74F1F05D2C600F70F98 /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		442274AD1F031C610072E50F /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		442274AF1F0333E30072E50F /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		69AC023C1EF7412E00E143A3 /* SocialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69AC023F1EF7412E00E143A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69AC02411EF7412F00E143A3 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -147,9 +151,11 @@
 		69AC02621EF7447600E143A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4411C74F1F05D2C600F70F98 /* CircleImageView.swift */,
 				69E386A01EF783270045C133 /* TopMargrin.swift */,
 				69E386A51EF785DF0045C133 /* RoundBtn.swift */,
 				69E386A71EF78B450045C133 /* RoundCornersBtn.swift */,
+				442274AF1F0333E30072E50F /* FancyView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -391,10 +397,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				69E386A81EF78B450045C133 /* RoundCornersBtn.swift in Sources */,
+				4411C7501F05D2C600F70F98 /* CircleImageView.swift in Sources */,
 				442274AE1F031C610072E50F /* FeedVC.swift in Sources */,
 				69AC02421EF7412F00E143A3 /* SignInVC.swift in Sources */,
 				69E386A61EF785DF0045C133 /* RoundBtn.swift in Sources */,
 				69AC02401EF7412E00E143A3 /* AppDelegate.swift in Sources */,
+				442274B01F0333E30072E50F /* FancyView.swift in Sources */,
 				69E386A11EF783270045C133 /* TopMargrin.swift in Sources */,
 				69E386A41EF783A40045C133 /* Constants.swift in Sources */,
 			);
