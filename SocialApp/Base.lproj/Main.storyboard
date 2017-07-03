@@ -222,13 +222,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ind-CI-H4Z">
                                         <rect key="frame" x="8" y="8" width="327" height="49"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="wfn-Qc-C8V" customClass="CircleImageView" customModule="SocialApp" customModuleProvider="target">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="wfn-Qc-C8V" customClass="CircleImageView" customModule="SocialApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
                                                 <color key="backgroundColor" red="0.002492246450856328" green="0.58062481880187988" blue="0.62789946794509888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="49" id="7aX-wi-YeZ"/>
                                                     <constraint firstAttribute="height" constant="49" id="A01-CQ-nAf"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="LPs-Oe-WLw" appends="YES" id="mCB-35-u7o"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add A Caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kpI-Qe-vjy">
                                                 <rect key="frame" x="59" y="0.0" width="209" height="49"/>
@@ -302,7 +306,7 @@
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ZZJ-9c-kEd">
                                                                     <rect key="frame" x="0.0" y="57" width="327" height="218"/>
                                                                 </imageView>
-                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="twN-7m-StD">
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twN-7m-StD">
                                                                     <rect key="frame" x="0.0" y="283" width="327" height="50"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
@@ -314,9 +318,15 @@
                                                                 </textView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="Nr2-Do-fSk" firstAttribute="leading" secondItem="EF2-NM-fU6" secondAttribute="leading" id="4h5-dM-8sE"/>
-                                                                <constraint firstItem="Nr2-Do-fSk" firstAttribute="top" secondItem="EF2-NM-fU6" secondAttribute="top" id="pvw-7y-g9e"/>
-                                                                <constraint firstAttribute="trailing" secondItem="Nr2-Do-fSk" secondAttribute="trailing" id="qcW-XU-ivu"/>
+                                                                <constraint firstItem="Nr2-Do-fSk" firstAttribute="leading" secondItem="EF2-NM-fU6" secondAttribute="leading" id="12B-Mm-O5L"/>
+                                                                <constraint firstItem="ZZJ-9c-kEd" firstAttribute="leading" secondItem="EF2-NM-fU6" secondAttribute="leading" id="3q7-xJ-qJT"/>
+                                                                <constraint firstAttribute="trailing" secondItem="twN-7m-StD" secondAttribute="trailing" id="CX8-vv-dNm"/>
+                                                                <constraint firstItem="ZZJ-9c-kEd" firstAttribute="top" secondItem="Nr2-Do-fSk" secondAttribute="bottom" constant="8" id="Cba-mb-mUV"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Nr2-Do-fSk" secondAttribute="trailing" id="Eg7-1X-2pZ"/>
+                                                                <constraint firstItem="twN-7m-StD" firstAttribute="top" secondItem="ZZJ-9c-kEd" secondAttribute="bottom" constant="8" id="WKb-AN-QiC"/>
+                                                                <constraint firstItem="Nr2-Do-fSk" firstAttribute="top" secondItem="EF2-NM-fU6" secondAttribute="top" id="anc-4j-EaE"/>
+                                                                <constraint firstAttribute="trailing" secondItem="ZZJ-9c-kEd" secondAttribute="trailing" id="aoW-sW-Vi5"/>
+                                                                <constraint firstItem="twN-7m-StD" firstAttribute="leading" secondItem="EF2-NM-fU6" secondAttribute="leading" id="xHb-Xt-h4w"/>
                                                             </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XhE-dU-6lf">
@@ -386,13 +396,19 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableVIew" destination="87F-y3-ylg" id="ZUf-ou-3cL"/>
+                        <outlet property="addImageOut" destination="wfn-Qc-C8V" id="UOL-Sf-WfO"/>
+                        <outlet property="tableView" destination="87F-y3-ylg" id="SG4-2U-a6T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWl-4D-TgX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="KRN-FP-gPO">
+                <tapGestureRecognizer id="KRN-FP-gPO" userLabel="LogOut Tap Gesture Recognizer">
                     <connections>
                         <action selector="logOutBtn:" destination="7Wm-ZI-Qrg" id="N8M-Ad-xfj"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="LPs-Oe-WLw" userLabel="addImage Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="addImageBtn:" destination="7Wm-ZI-Qrg" id="B88-jX-X8L"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

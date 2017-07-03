@@ -42,14 +42,15 @@ class SignInVC: UIViewController {
             case .success( _, _, _):
                 print("$*$*$* Logged in!")
                 let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-                self.firebaseAuth(withCredential: credential)
-                self.performSegue(withIdentifier: "goToFeedVC", sender: self)
+                self.firebaseAuth(withCredential: credential, completed: { 
+                    self.performSegue(withIdentifier: "goToFeedVC", sender: self)
+                })
                 
             }
         }
     }
     
-    func firebaseAuth(withCredential cred: AuthCredential) {
+    func firebaseAuth(withCredential cred: AuthCredential, completed: @escaping () -> ()) {
         Auth.auth().signIn(with: cred) { (user, error) in
             if error != nil {
                 print("$*$*$* unable to authenticate with firebase: \(error.debugDescription)")
@@ -57,6 +58,7 @@ class SignInVC: UIViewController {
                 print("$*$*$* successfully authenticated with Firebase")
                 if let user = user {
                     FirebaseDataService.ds.createFirebaseUser(uid: user.uid, userData: ["provider": cred.provider])
+                    completed()
                 }
             }
         }
