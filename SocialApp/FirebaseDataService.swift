@@ -37,9 +37,16 @@ class FirebaseDataService {
         return _REF_USERS
     }
     
+    var REF_USER_CURRENT: DatabaseReference {
+        let uid = Auth.auth().currentUser?.uid
+        let user = REF_USERS.child(uid!)
+        return user
+    }
+    
     var REF_POST_IMAGES: StorageReference {
         return _REF_POST_IMAGES
     }
+    
     
     func createFirebaseUser(uid: String, userData: [String:String]) {
         REF_USERS.child(uid).updateChildValues(userData)

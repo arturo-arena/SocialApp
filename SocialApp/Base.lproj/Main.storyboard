@@ -248,6 +248,9 @@
                                                     <constraint firstAttribute="height" constant="49" id="s4L-dw-bjZ"/>
                                                 </constraints>
                                                 <state key="normal" image="add-post"/>
+                                                <connections>
+                                                    <action selector="postBtn:" destination="7Wm-ZI-Qrg" eventType="touchUpInside" id="l5d-T5-DZo"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -296,6 +299,7 @@
                                                                         </label>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="2lo-LJ-iX5">
                                                                             <rect key="frame" x="278" y="0.0" width="49" height="49"/>
+                                                                            <gestureRecognizers/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="49" id="EcY-Ia-IlT"/>
                                                                                 <constraint firstAttribute="width" constant="49" id="ewD-Y1-3Di"/>
@@ -369,6 +373,7 @@
                                         <connections>
                                             <outlet property="ProfileImg" destination="CU9-Xy-oyh" id="s6M-On-x1A"/>
                                             <outlet property="caption" destination="twN-7m-StD" id="SdL-jI-ft2"/>
+                                            <outlet property="likesImg" destination="2lo-LJ-iX5" id="WIf-zO-mla"/>
                                             <outlet property="numberOfLikeLbl" destination="gbI-BB-6zf" id="ora-7B-hg6"/>
                                             <outlet property="postImg" destination="ZZJ-9c-kEd" id="Sh1-F9-y6m"/>
                                             <outlet property="usernameLbl" destination="zHs-YF-kZO" id="nZe-8F-Ywi"/>
@@ -397,6 +402,7 @@
                     </view>
                     <connections>
                         <outlet property="addImageOut" destination="wfn-Qc-C8V" id="UOL-Sf-WfO"/>
+                        <outlet property="captionField" destination="kpI-Qe-vjy" id="9sh-hG-idV"/>
                         <outlet property="tableView" destination="87F-y3-ylg" id="SG4-2U-a6T"/>
                     </connections>
                 </viewController>
